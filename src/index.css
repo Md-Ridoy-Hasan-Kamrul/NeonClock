@@ -1,0 +1,37 @@
+@import "tailwindcss";
+
+@layer base {
+  html,
+  body,
+  #root {
+    height: 100%;
+  }
+
+  body {
+    @apply bg-slate-950 text-slate-100 antialiased;
+  }
+}
+
+@layer utilities {
+  .text-glow-cyan {
+    text-shadow:
+      0 0 8px rgba(34, 211, 238, 0.55),
+      0 0 24px rgba(34, 211, 238, 0.3);
+  }
+
+  .text-glow-violet {
+    text-shadow:
+      0 0 8px rgba(167, 139, 250, 0.55),
+      0 0 24px rgba(167, 139, 250, 0.28);
+  }
+
+  .animate-blink {
+    animation: blink 1s steps(1) infinite;
+  }
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0.2;
+  }
+}
